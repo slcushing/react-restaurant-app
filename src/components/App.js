@@ -1,19 +1,19 @@
 // import MenuItem from './MenuItem'
-import {useState, useEffect} from 'react';
+import {useState} from 'react';
 import MenuList from './MenuList'
 import menuItems from './utilities/menu.js'
 import Order from './Order'
 
 
 function App() {  
-  const [order, setOrder] = useState([]);
+  // const [menuItems, setMenuItems] = useState(menuItems);
+  const [order, setOrders] = useState([]);
 
-  useEffect(() =>
-    setOrder([
-
-    ])
-  
-  )
+  function addToOrder(name, price) {
+    const newOrder = {name, price}
+    setOrders([...order, newOrder])
+    // console.log("ORDER");
+  }
 
 
 
@@ -21,7 +21,7 @@ function App() {
   return (
   
     <div className="App">
-     <MenuList menuItems={menuItems} />
+     <MenuList menuItems={menuItems} addToOrder={addToOrder}/>
      <Order  />
     </div>
   );

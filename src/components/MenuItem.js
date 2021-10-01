@@ -1,3 +1,5 @@
+
+
 function MenuItem(props) { 
     const menuItemHTML = (
         
@@ -5,14 +7,16 @@ function MenuItem(props) {
                  <p>{props.name}</p>
                  <p>{props.description}</p>
                  <p>{props.price}</p>
-                 <button type="button" name={props.name}>Add Item</button> 
+                 <button type="button" name={props.name} onClick={handleChange}>Add Item</button> 
              </li>
         
     );
-    //need onClick on the button above
     
-    // function handleClick(event) {
-    // }
+    function handleChange(event) {
+        // event.preventDefault();
+        console.log('you clicked it!');
+        props.addToOrder(props.name, props.price);
+    }
 
     return (
         <ul>
