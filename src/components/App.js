@@ -1,20 +1,28 @@
-import MenuItem from './MenuItem'
+// import MenuItem from './MenuItem'
+import {useState, useEffect} from 'react';
 import MenuList from './MenuList'
+import menuItems from './utilities/menu.js'
 import Order from './Order'
 
-function App() {
+
+function App() {  
+  const [order, setOrder] = useState([]);
+
+  useEffect(() =>
+    setOrder([
+
+    ])
+  
+  )
+
+
 
   
-  
-  
-  
-  
-  
   return (
+  
     <div className="App">
-     <MenuItem />
-     <MenuList />
-     <Order />
+     <MenuList menuItems={menuItems} />
+     <Order  />
     </div>
   );
 }

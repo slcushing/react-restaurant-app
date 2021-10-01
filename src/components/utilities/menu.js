@@ -1,29 +1,27 @@
-
-
 const menuItems = [
 {   id:1,
     category: 'Appetizer',
     name: 'Bread & Pesto',
     description:'Grilled stecca bread served with pistachio pesto and olive oil with fresh spices ',
-    price: 6.50
+    price: 650
 }, {
     id:2,
     category: 'Appetizer',
     name: 'Sharkcootie Board',
     description:'',
-    price:''
+    price: 1500
 }, {   
     id:3,
     category: 'Appetizer',
     name: 'Italian Style Salad',
     description:'Grilled stecca bread served with pistachio pesto and olive oil with fresh spices ',
-    price: 7.50
+    price: 750
 }, {
     id:4,
     category: 'Appetizer',
     name: 'Caprese',
     description:'',
-    price:''
+    price: 800
 }, {
     id:5,
     category: 'Appetizer',
@@ -150,12 +148,6 @@ const menuItems = [
     name: '',
     description:'',
     price:''
-}
+}];
 
-
-
-
-
-
-
-]
+export default menuItems;
