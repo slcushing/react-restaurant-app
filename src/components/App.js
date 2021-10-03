@@ -56,8 +56,14 @@ function App() {
             <li>Contact Us</li>
           </ul>
         </nav>
-        <h1>NONNA'S KITCHEN</h1>
+        <h1>Nonna's Kitchen</h1>
       </header>
+      <nav className="category-bar">
+        <button type="submit" className="appetizer">Appetizers</button>
+        <button type="submit" className="entrees">Entrees</button>
+        <button type="sumbit" className="desserts">Desserts</button>
+        <button type="submit" className="drinks">Drinks</button>
+      </nav>
      <div className="container" style={{ backgroundImage: "url(images/table-background.jpeg)" }}>
      <MenuList menuItems={menuItems} order={order} setOrder={setOrder} addToCart={addToCart}/>
      <Order  order={order} setOrder={setOrder} addToCart={addToCart} addOrder={addOrder}/>
