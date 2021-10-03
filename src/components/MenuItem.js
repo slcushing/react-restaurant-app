@@ -13,9 +13,9 @@ function MenuItem(props) {
     );
     
     function handleChange(event) {
-        // event.preventDefault();
+        event.preventDefault();
         console.log('you clicked it!');
-        props.addToOrder(props.name, props.price);
+        props.addToCart(props.name, props.price);
     }
 
     return (

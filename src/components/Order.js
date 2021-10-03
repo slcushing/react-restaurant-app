@@ -2,19 +2,23 @@ import {useState} from 'react'
 
 function Order(props) {
     
-    const orderHTML = props.order.map((order, index) => 
+    const orderHTML = props.order.map((order, index) => {
+        return (
         <div key={index}> 
-            <p>{order.name} {order.price}</p>
+            <p>{order.name}</p> 
+            <p>{order.price}</p>
         </div>
-    );//get name and price to show up...
+        );
+    });
     
 
     const[name, setName] = useState("");
     const[phoneNumber, setPhoneNumber] = useState("");
+    // const[newOrder, setNewOrder] = useState(props.order)
 
     function handleSubmit(event) {
         event.preventDefault();
-        props.addToOrder(props.order, name, phoneNumber);
+        props.addOrder(props.order, name, phoneNumber);
         setName("");
         setPhoneNumber("");
     }
@@ -37,11 +41,10 @@ function Order(props) {
     }
 
     return (
-        <>
         <aside className="order-panel">
         
         {orderHTML}
-        <p> Your total: {subtotal()} </p>
+        <p> Your order total: {subtotal()} </p>
         
         <p>Enter your name and phone number below. Please review your order carefully before you click Submit Your Order.</p>
         <form onSubmit={handleSubmit}>
@@ -51,9 +54,8 @@ function Order(props) {
         </form>
         </aside>
         
-        </>
     )
     
-}
+};
 
 export default Order
