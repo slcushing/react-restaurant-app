@@ -8,6 +8,8 @@ import Order from './Order'
 function App() {  
   // const [menuItems, setMenuItems] = useState(menuItems);
   const [order, setOrders] = useState([]);
+  // const [filter, setFilter] = useState();
+  // const [subtotal, setSubtotal] = useState(0);
 
   function addToOrder(name, price) {
     const newOrder = {name, price}
@@ -17,14 +19,26 @@ function App() {
 
 
 
+
+// function filterTag(event) {
+//   if(event.target.value === 'all') {
+//       setFilter(null)
+//   } else {
+//       setFilter(event.target.value);
+//   }
+// }
+
   
   return (
   
     <div className="App">
+      
      <MenuList menuItems={menuItems} addToOrder={addToOrder}/>
-     <Order  />
+     <Order  order={order} addToOrder={addToOrder}/>
     </div>
   );
 }
 
 export default App
+
+
