@@ -1,0 +1,78 @@
+.App {
+  /* background-color: #c4bbaf; */
+  
+}
+
+.header {
+  display: flex;
+  height: 100px;
+  background-color: #5a2a27;
+}
+
+nav {
+  display:flex;
+}
+
+.nav-bar {
+  list-style: none;
+  display: flex;
+  color:#c4bbaf;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+
+
+h1 {
+  color:#c4bbaf;
+
+}
+
+.container {
+  display:flex;
+  
+}
+
+.menu-section {
+  display: flex;
+  flex-direction: column;
+  width: 65%;
+}
+
+.menu-item {
+  list-style: none;
+  display:flex;
+  flex-direction: column;
+  border: solid 2px #5c4742;
+  padding: 5px;
+  margin-right: 1em;
+  background-color: #c4bbaf;
+}
+
+.menu-item p {
+  display:flex;
+  margin: 0;
+  
+}
+
+.menu-item h3 {
+  margin: 0;
+}
+
+.menu-item button {
+  height: 30px;
+  width: 90px;
+  align-items: center;
+}
+
+.order-panel {
+  display:flex;
+  flex-direction: column;
+  width: 35%;
+  height: 35%;
+  background-color: #8d5b4c;
+  padding: 1em;
+  border: solid 2px #5c4742;
+  margin-top: 1em;
+  margin-right: 2em;
+}

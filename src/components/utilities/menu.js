@@ -7,9 +7,9 @@ const menuItems = [
 }, {
     id:2,
     category: 'Appetizer',
-    name: 'Sharkcootie Board',
-    description:'',
-    price: 1500
+    name: 'Meat & Cheese Board',
+    description:'Toasted stecca, artisanal cheeses, salami, house pickles, condimento',
+    price: 1800
 }, {   
     id:3,
     category: 'Appetizer',

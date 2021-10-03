@@ -5,8 +5,7 @@ function Order(props) {
     const orderHTML = props.order.map((order, index) => {
         return (
         <div key={index}> 
-            <p>{order.name}</p> 
-            <p>{order.price}</p>
+            <p>{order.name} {order.price}</p>
         </div>
         );
     });
@@ -46,7 +45,7 @@ function Order(props) {
         {orderHTML}
         <p> Your order total: {subtotal()} </p>
         
-        <p>Enter your name and phone number below. Please review your order carefully before you click Submit Your Order.</p>
+        <p>Enter your name and phone number below. Please review your order carefully before you submit your order.</p>
         <form onSubmit={handleSubmit}>
             <input name="text" type="text" id="full-name" value={name} onChange={handleNameChange} placeholder="Full Name"></input>
             <input name="text" type="text" id="phone-number" value={phoneNumber} onChange={handleNumberChange} placeholder="Phone Number"></input>

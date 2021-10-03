@@ -8,7 +8,9 @@ function MenuList(props) {
 
 
     return(
-        <section>{MenuListHTML}</section>
+        <section className="menu-section">
+            {MenuListHTML}
+        </section>
     );
 
 };

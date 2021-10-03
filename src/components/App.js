@@ -1,8 +1,10 @@
 // import MenuItem from './MenuItem'
 import {useState} from 'react';
+import "./App.css";
 import MenuList from './MenuList'
 import menuItems from './utilities/menu.js'
 import Order from './Order'
+
 
 const BASE_URL = "https://tiny-taco-server.herokuapp.com/nonnas-kitchen/";
 
@@ -46,9 +48,20 @@ function App() {
   return (
   
     <div className="App">
-      
+      <header className="header">
+        <nav>
+          <ul className="nav-bar">
+            <li>Home</li>
+            <li>About Us </li>
+            <li>Contact Us</li>
+          </ul>
+        </nav>
+        <h1>NONNA'S KITCHEN</h1>
+      </header>
+     <div className="container" style={{ backgroundImage: "url(images/table-background.jpeg)" }}>
      <MenuList menuItems={menuItems} order={order} setOrder={setOrder} addToCart={addToCart}/>
      <Order  order={order} setOrder={setOrder} addToCart={addToCart} addOrder={addOrder}/>
+     </div>
     </div>
   )
 }

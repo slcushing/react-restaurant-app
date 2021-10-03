@@ -3,8 +3,8 @@
 function MenuItem(props) { 
     const menuItemHTML = (
         
-            <li>
-                 <p>{props.name}</p>
+            <li className="menu-item">
+                 <h3>{props.name}</h3>
                  <p>{props.description}</p>
                  <p>{props.price}</p>
                  <button type="button" name={props.name} onClick={handleChange}>Add Item</button> 
@@ -14,12 +14,12 @@ function MenuItem(props) {
     
     function handleChange(event) {
         event.preventDefault();
-        console.log('you clicked it!');
+        // console.log('you clicked it!');
         props.addToCart(props.name, props.price);
     }
 
     return (
-        <ul>
+        <ul className="menu-list">
             {menuItemHTML}
         </ul>
     )
