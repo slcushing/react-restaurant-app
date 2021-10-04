@@ -1,4 +1,4 @@
-
+import FormatPrice from "./utilities/FormatPrice";
 
 function MenuItem(props) { 
     const menuItemHTML = (
@@ -6,7 +6,7 @@ function MenuItem(props) {
             <li className="menu-item">
                  <h3>{props.name}</h3>
                  <p>{props.description}</p>
-                 <p>{props.price}</p>
+                 <p>{FormatPrice(props.price)}</p>
                  <button type="button" name={props.name} onClick={handleChange}>Add Item</button> 
              </li>
         

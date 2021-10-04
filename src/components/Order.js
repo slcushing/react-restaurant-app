@@ -1,11 +1,12 @@
 import {useState} from 'react'
+import FormatPrice from "./utilities/FormatPrice";
 
 function Order(props) {
     
     const orderHTML = props.order.map((order, index) => {
         return (
         <div key={index}> 
-            <p>{order.name} {order.price}</p>
+            <p>{order.name} {FormatPrice(order.price)}</p>
         </div>
         );
     });
@@ -36,7 +37,7 @@ function Order(props) {
             total = total + order.price;
         });
         
-        return total;
+        return FormatPrice(total);
     }
 
     return (
@@ -49,7 +50,7 @@ function Order(props) {
         <form onSubmit={handleSubmit}>
             <input name="text" type="text" id="full-name" value={name} onChange={handleNameChange} placeholder="Full Name"></input>
             <input name="text" type="text" id="phone-number" value={phoneNumber} onChange={handleNumberChange} placeholder="Phone Number"></input>
-            <button type="submit">Submit Your Order</button>
+            <button type="submit" className="submit-order">Submit Your Order</button>
         </form>
         </aside>
         
