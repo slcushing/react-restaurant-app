@@ -22,7 +22,6 @@ function App() {
 
   async function addOrder(order, name, phoneNumber) {
     const newOrder = {order, name, phoneNumber};
-    // setOrder([...order, newOrder])
     const response = await fetch(`${BASE_URL}`, {
       method: "POST",
       headers: {
@@ -77,12 +76,7 @@ function App() {
      <Order  order={order} setOrder={setOrder} addToCart={addToCart} addOrder={addOrder}/>
      </div>
      <div className="pic-ribbon">
-        <img src="./images/basil.jpeg" alt="" />
-        <img src="./images/spaghetti.jpeg" alt="" />
-        <img src="./images/cannoli.jpeg" alt="" />
-        <img src="./images/espresso2.jpeg" alt="" />
-        <img src="" alt="" />
-        <img src="" alt="" />
+        
      </div>
     </div>
   )

@@ -5,7 +5,7 @@ function Order(props) {
     
     const orderHTML = props.order.map((order, index) => {
         return (
-        <div key={index}> 
+        <div key={index} className="added-item"> 
             <p>{order.name} {FormatPrice(order.price)}</p>
         </div>
         );
@@ -44,7 +44,7 @@ function Order(props) {
         <aside className="order-panel">
         
         {orderHTML}
-        <p> Your order total: {subtotal()} </p>
+        <p id="subtotal"> Your order total: {subtotal()} </p>
         
         <p>Enter your name and phone number below. Please review your order carefully before you submit your order.</p>
         <form onSubmit={handleSubmit}>

@@ -21,6 +21,7 @@ nav {
   justify-content: flex-start;
   align-items: flex-end;
   margin-bottom: 1px;
+  cursor: pointer;
 }
 
 .nav-bar li {
@@ -67,31 +68,6 @@ h1 {
   cursor: pointer;
   color:white;
 }
-/* .appetizer {
-  background-image: url('./images/basil.jpeg');
-  background-position: center center;
-  background-size: 100%;
-  color: white;
-} */
-
-/* .entrees {
-  background-image: url('./images/spaghetti.jpeg');
-  background-position: center center;
-  background-size: 100%;
-}
-
-.desserts {
-  background-image: url('./images/cannoli.jpeg');
-  background-position: center center;
-  background-size: 100%;
-}
-
-.drinks {
-  background-image: url('./images/espresso2.jpeg');
-  background-position: center center;
-  background-size: 100%;
-} */
-
 
 .container {
   display:flex;
@@ -146,12 +122,48 @@ h1 {
   font-weight: bold;
 }
 
+.added-item {
+  padding:0;
+  margin-bottom: 10px;
+  height: 15px;
+}
+
 .submit-order {
   font-family: Pacifico;
   cursor: pointer;
 }
 
+#subtotal {
+  font-size: 22px;
+  margin: 30px 10px 10px 10px;
+}
+
 .pic-ribbon {
   display:flex;
+
+}
+
+.basil {
+  background-image: url('./images/basil.jpeg');
+  background-position: center center;
+  background-size: 100%;
   
+} 
+
+.spaghetti {
+  background-image: url('./images/spaghetti.jpeg');
+  background-position: center center;
+  background-size: 100%;
+} 
+
+.cannoli {
+  background-image: url('./images/cannoli.jpeg');
+  background-position: center center;
+  background-size: 100%;
+}
+
+.espresso {
+  background-image: url('./images/espresso2.jpeg');
+  background-position: center center;
+  background-size: 100%;
 }
