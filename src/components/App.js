@@ -1,16 +1,18 @@
 // import MenuItem from './MenuItem'
-import {useState} from 'react';
+import {useEffect, useState} from 'react';
 import "./App.css";
 import MenuList from './MenuList'
-import menuItems from './utilities/menu.js'
+// import menuItems from './utilities/menu.js'
 import Order from './Order'
+import basilImage from './images/basil.jpeg';
 
 
-const BASE_URL = "https://tiny-taco-server.herokuapp.com/nonnas-kitchen/";
+const ORDER_URL = "https://django-restaurantapi-slcushing.herokuapp.com/api_v1/orders/";
+//order endpoint that I set up using django/heroku
 
 
 function App() {  
-  // const [menuItems, setMenuItems] = useState(menuItems);
+  const [menuItems, setMenuItems] = useState([]);
   const [order, setOrder] = useState([]);
   // const [selection, setSelection] = useState('Appetizer')
   
@@ -20,9 +22,21 @@ function App() {
     setOrder([...order, newOrder])
   }
 
+  useEffect(() => {
+    
+    async function getMenuItems(){
+      const response = await fetch('https://django-restaurantapi-slcushing.herokuapp.com/api_v1/menuitems/');
+      const data = await response.json();
+      setMenuItems(data);
+    };
+
+    getMenuItems();
+
+  }, []);
+
   async function addOrder(order, name, phoneNumber) {
     const newOrder = {order, name, phoneNumber};
-    const response = await fetch(`${BASE_URL}`, {
+    const response = await fetch(`${ORDER_URL}`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -76,7 +90,7 @@ function App() {
      <Order  order={order} setOrder={setOrder} addToCart={addToCart} addOrder={addOrder}/>
      </div>
      <div className="pic-ribbon">
-        
+        <img src={basilImage} alt="" />
      </div>
     </div>
   )
